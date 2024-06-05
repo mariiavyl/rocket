@@ -1,3 +1,6 @@
+body{
+    font-family: 'Arial, Helvetica, sans-serif';
+}
 .left{
     background-color: pink;
     position: fixed;
@@ -5,6 +8,24 @@
     height: 100%;
     top: 0;
     left: 0;
+}
+.interface{
+    text-align: center;
+    padding: 20px;
+
+}
+a.button{
+    display: inline-block;
+    background-color: beige;
+    color: black;
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: color 300ms;
+}
+a:hover{
+    color:magenta;
 }
 .right{
     background-color: palevioletred;
@@ -16,26 +37,74 @@
 }
 
 .ground{
-    background-color: green;
+    background: url('../img/ground.png') no-repeat center 0;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 20px;
+    width: 887px;
+    height: 105px;
 }
 
+.nervous{
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    background: url(../img/nervous.png) no-repeat 0 0;
+    width: 804px;
+    height: 354px;
+    transform: scale(0.4);
+    margin-left: -400px;
+    display: none;
+}
+.nervous.show{
+    display: block;
+}
+.cant-wait{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    background: url(../img/cantwait.png) no-repeat 0 0;
+    width: 818px;
+    height: 353px;
+    transform: scale(0.4);
+    margin-left: -400px;
+    display: none;
+}
+.cant-wait.show{
+    display: block;
+}
 .rocket{
     position: absolute;
     left: 50%;
-    bottom: 20px;
-    width: 20px;
-    height: 100px;
-    background-color: blue;
-    transition: bottom 1000ms;
+    bottom: -90px;
+    width: 218px;
+    height: 366px;
+    margin-left: -109px;
+    transform: scale(0.5);
+    background: url('../img/state1.png') no-repeat 0 0;
+    transition: bottom 3000ms;
 }
+
+body.body-state2 .rocket{
+    background-image: url('../img/state2.png');
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+    background-image: url('../img/state3.png');
+}
+body.body-state5 .rocket{
+    background-image: url('../img/boom.png');
+    width: 512px;
+    height: 512px;
+    margin-left: -256px;
+    transform: scale(0.5);
+}
+
 body.body-state1 .rocket{
     transition: none;
 }
+
 body.body-state3 .rocket,
 body.body-state4 .rocket{
     bottom: 1000px;
