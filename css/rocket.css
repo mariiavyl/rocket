@@ -49,7 +49,7 @@ a:hover{
     position: absolute;
     top: 150px;
     left: 50%;
-    background: url(../img/nervous.png) no-repeat 0 0;
+    background: url('../img/nervous.png') no-repeat 0 0;
     width: 804px;
     height: 354px;
     transform: scale(0.4);
@@ -63,7 +63,7 @@ a:hover{
     position: absolute;
     top: 0px;
     left: 50%;
-    background: url(../img/cantwait.png) no-repeat 0 0;
+    background: url('../img/cantwait.png') no-repeat 0 0;
     width: 818px;
     height: 353px;
     transform: scale(0.4);
